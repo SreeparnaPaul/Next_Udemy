@@ -41,7 +41,7 @@ function FilteredEventPage() {
     year: numYear,
     month: numMonth,
   });
-  console.log(filteredEvents, "line44");
+
   if (!filteredEvents || filteredEvents.length === 0) {
     return (
       <Fragment>
