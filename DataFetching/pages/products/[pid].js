@@ -26,6 +26,9 @@ export async function getStaticProps(context) {
   const productId = params.pid;
   const data = await getData();
   const product = data.products.find((product) => product.id === productId);
+  if (!product) {
+    return { notFound: true };
+  }
   return {
     props: {
       loadedProduct: product,
