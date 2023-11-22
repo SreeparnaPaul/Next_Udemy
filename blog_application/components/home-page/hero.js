@@ -12,7 +12,10 @@ function Hero() {
         />
       </div>
       <h1>Hi,I am Sreeparna</h1>
-      <p>I blog about web development</p>
+      <p>
+        I blog about web development-specially on Frontend Technology like
+        React, NextJs and Blockchain - Public blockchain like Polygon, Hedera
+      </p>
     </section>
   );
 }
