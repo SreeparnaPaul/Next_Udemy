@@ -1,12 +1,22 @@
 import FeaturedPosts from "@/components/home-page/featured-posts";
 import Hero from "@/components/home-page/hero";
+import { getFeaturedPosts } from "@/lib/posts-util";
 import { Fragment } from "react";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <Fragment>
       <Hero />
-      <FeaturedPosts />
+      <FeaturedPosts posts={props.posts} />
     </Fragment>
   );
+}
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
 }
